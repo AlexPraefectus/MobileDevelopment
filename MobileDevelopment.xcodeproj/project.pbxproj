@@ -22,6 +22,7 @@
 		01462530256922630031E0B4 /* MoviesData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MoviesData; sourceTree = "<group>"; };
 		01462534256927540031E0B4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0146253925692BE70031E0B4 /* JSONMovieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMovieReader.swift; sourceTree = "<group>"; };
+		01B88728256A66C600C7645B /* L3_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = L3_README.md; sourceTree = "<group>"; };
 		0C28912B25178C2C002B4028 /* MobileDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C28912E25178C2C002B4028 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C28913025178C2C002B4028 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +61,18 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		01B88727256A667B00C7645B /* readme */ = {
+			isa = PBXGroup;
+			children = (
+				01B88728256A66C600C7645B /* L3_README.md */,
+			);
+			path = readme;
+			sourceTree = "<group>";
+		};
 		0C28912225178C2C002B4028 = {
 			isa = PBXGroup;
 			children = (
+				01B88727256A667B00C7645B /* readme */,
 				0C28912D25178C2C002B4028 /* MobileDevelopment */,
 				0C28912C25178C2C002B4028 /* Products */,
 			);

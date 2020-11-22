@@ -48,7 +48,6 @@ class CustomLabel: UILabel {
             self.sizeToFit();
         }
     }
-    
 }
 
 
