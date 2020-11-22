@@ -1,0 +1,9 @@
+
+/* Class = "UITabBarItem"; title = "Movies"; ObjectID = "H1K-hj-HD8"; */
+"H1K-hj-HD8.title" = "Movies";
+
+/* Class = "UITabBarController"; title = "Main screen"; ObjectID = "U7a-aP-rC3"; */
+"U7a-aP-rC3.title" = "Main screen";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "cv7-s1-D5v"; */
+"cv7-s1-D5v.title" = "Item 2";
