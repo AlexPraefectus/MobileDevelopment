@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMc-sr-oUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="840"/>
+            <point key="canvasLocation" x="210" y="1060"/>
         </scene>
         <!--Main screen-->
         <scene sceneID="nP7-id-Mbg">
@@ -35,7 +35,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="UKC-GL-oXi" kind="relationship" relationship="viewControllers" id="G95-R6-1sN"/>
+                        <segue destination="g4j-E8-kFy" kind="relationship" relationship="viewControllers" id="G95-R6-1sN"/>
                         <segue destination="eqE-eC-sbd" kind="relationship" relationship="viewControllers" id="cYQ-LS-rcf"/>
                     </connections>
                 </tabBarController>
@@ -57,15 +57,60 @@
                             <outlet property="delegate" destination="UKC-GL-oXi" id="6PF-6m-eMc"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="aRo-Nr-B3M"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Movies" id="ZAU-43-Ibr">
+                        <barButtonItem key="rightBarButtonItem" title="Add Movie" image="plus" catalog="system" id="CXD-M2-G3c">
+                            <connections>
+                                <segue destination="WOP-1S-sni" kind="show" id="Sr2-g6-UDC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ub3-Hc-HA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="131"/>
+            <point key="canvasLocation" x="1789.8550724637682" y="130.58035714285714"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="zBJ-FS-feU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g4j-E8-kFy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="aRo-Nr-B3M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" id="akV-55-Miz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UKC-GL-oXi" kind="relationship" relationship="rootViewController" id="24w-GY-gYp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFR-2g-I9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="130.58035714285714"/>
+        </scene>
+        <!--Add Movie Controller-->
+        <scene sceneID="TKS-gH-LsL">
+            <objects>
+                <viewController id="WOP-1S-sni" customClass="AddMovieController" customModule="MobileDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5eX-Iy-1IY" customClass="AddMovieView" customModule="MobileDevelopment" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fC1-0e-jVP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yH0-Hu-J9M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NB2-NF-j6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="-211.60714285714286"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="film" catalog="system" width="128" height="93"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

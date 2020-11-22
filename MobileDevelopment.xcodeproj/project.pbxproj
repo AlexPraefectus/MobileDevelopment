@@ -10,6 +10,8 @@
 		01462531256922630031E0B4 /* MoviesData in Resources */ = {isa = PBXBuildFile; fileRef = 01462530256922630031E0B4 /* MoviesData */; };
 		01462535256927540031E0B4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01462534256927540031E0B4 /* Movie.swift */; };
 		0146253A25692BE70031E0B4 /* JSONMovieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146253925692BE70031E0B4 /* JSONMovieReader.swift */; };
+		01B8872C256AD4AB00C7645B /* AddMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8872B256AD4AB00C7645B /* AddMovieController.swift */; };
+		01B88730256ADFBD00C7645B /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8872F256ADFBD00C7645B /* AddMovieView.swift */; };
 		0C28912F25178C2C002B4028 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28912E25178C2C002B4028 /* AppDelegate.swift */; };
 		0C28913125178C2C002B4028 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28913025178C2C002B4028 /* SceneDelegate.swift */; };
 		0C28913325178C2C002B4028 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28913225178C2C002B4028 /* TableViewController.swift */; };
@@ -23,6 +25,8 @@
 		01462534256927540031E0B4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0146253925692BE70031E0B4 /* JSONMovieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMovieReader.swift; sourceTree = "<group>"; };
 		01B88728256A66C600C7645B /* L3_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = L3_README.md; sourceTree = "<group>"; };
+		01B8872B256AD4AB00C7645B /* AddMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieController.swift; sourceTree = "<group>"; };
+		01B8872F256ADFBD00C7645B /* AddMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieView.swift; sourceTree = "<group>"; };
 		0C28912B25178C2C002B4028 /* MobileDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C28912E25178C2C002B4028 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C28913025178C2C002B4028 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,22 @@
 			path = readme;
 			sourceTree = "<group>";
 		};
+		01B8872A256AD48E00C7645B /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01B8872B256AD4AB00C7645B /* AddMovieController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		01B8872E256ADF9F00C7645B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				01B8872F256ADFBD00C7645B /* AddMovieView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		0C28912225178C2C002B4028 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +109,8 @@
 		0C28912D25178C2C002B4028 /* MobileDevelopment */ = {
 			isa = PBXGroup;
 			children = (
+				01B8872E256ADF9F00C7645B /* views */,
+				01B8872A256AD48E00C7645B /* controllers */,
 				0146253725692AA10031E0B4 /* lib */,
 				01462533256927390031E0B4 /* models */,
 				01462530256922630031E0B4 /* MoviesData */,
@@ -177,8 +199,10 @@
 			files = (
 				0146253A25692BE70031E0B4 /* JSONMovieReader.swift in Sources */,
 				0C28913325178C2C002B4028 /* TableViewController.swift in Sources */,
+				01B88730256ADFBD00C7645B /* AddMovieView.swift in Sources */,
 				0C28912F25178C2C002B4028 /* AppDelegate.swift in Sources */,
 				01462535256927540031E0B4 /* Movie.swift in Sources */,
+				01B8872C256AD4AB00C7645B /* AddMovieController.swift in Sources */,
 				0C28913125178C2C002B4028 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
