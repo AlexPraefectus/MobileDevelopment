@@ -10,7 +10,7 @@
 
 No problems creating model representing movie
 
-No problems reading .json files or setting poster images
+No problems reading `.json` files or setting poster images
 
 Problems creating cells - method call was returning null
 ```swift
@@ -20,7 +20,7 @@ Changed hardcoded string to constant (probably pointer rather than value compari
 
 Faced a lot of problems building layout with anchors:
 
-+ Was binding subviews anchors to self.<anchor> instead of self.contentView.<anchor>. Cause of this, view cell did not calculate it's size correctly - layout was completely broken.
++ Was binding subviews anchors to `self.<anchor>` instead of `self.contentView.<anchor>`. Cause of this, view cell did not calculate it's size correctly - layout was completely broken.
 + Forgot to disable `translatesAutoresizingMaskIntoConstraints` - layout was completely broken
 + Problems to fit long texts - subclassed label with 
 ```swift
