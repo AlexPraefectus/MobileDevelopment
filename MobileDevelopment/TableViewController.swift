@@ -49,6 +49,16 @@ class TableViewController: UITableViewController {
         reader.readMovies();
         return reader.movies;
     }
+    
+    @IBAction func done(segue:UIStoryboardSegue) {
+        let addMovieVC = segue.source as! AddMovieController;
+        movies.append(addMovieVC.movieToSave!);
+        tableView.reloadData();
+    }
+    
+    @IBAction func cancel(segue:UIStoryboardSegue) {
+        navigationController?.popViewController(animated: true);
+    }
 }
 
 class CustomLabel: UILabel {

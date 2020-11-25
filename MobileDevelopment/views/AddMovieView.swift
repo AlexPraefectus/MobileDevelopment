@@ -40,7 +40,7 @@ class AddMovieView: UIView {
         titleLabel.widthAnchor.constraint(equalToConstant: 80).isActive = true;
         titleLabel.topAnchor.constraint(
             equalTo: safeAreaLayoutGuide.topAnchor,
-            constant: 20
+            constant: 80
         ).isActive = true;
         titleLabel.leftAnchor.constraint(
             equalTo: safeAreaLayoutGuide.leftAnchor,
@@ -51,7 +51,10 @@ class AddMovieView: UIView {
         titleInput.keyboardType = UIKeyboardType.default;
         titleInput.placeholder = "Awesome movie title";
         titleInput.sizeToFit();
-        titleInput.widthAnchor.constraint(equalToConstant: 100).isActive = true;
+        titleInput.widthAnchor.constraint(
+            equalTo: safeAreaLayoutGuide.widthAnchor,
+            constant: -150
+        ).isActive = true;
         titleInput.topAnchor.constraint(equalTo: titleLabel.topAnchor).isActive = true;
         titleInput.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 20).isActive = true;
         
@@ -83,5 +86,15 @@ class AddMovieView: UIView {
         typeInput.widthAnchor.constraint(equalTo: titleInput.widthAnchor).isActive = true;
         typeInput.topAnchor.constraint(equalTo: typeLabel.topAnchor).isActive = true;
         typeInput.leftAnchor.constraint(equalTo: titleInput.leftAnchor).isActive = true;
+    }
+    
+    func getMovie() -> Movie {
+        return Movie(
+            title: titleInput.text ?? "",
+            year: yearInput.text ?? "",
+            imdbId: "",
+            type: typeInput.text ?? "",
+            poster: ""
+        )
     }
 }
