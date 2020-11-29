@@ -10,7 +10,6 @@
 		01462531256922630031E0B4 /* MoviesData in Resources */ = {isa = PBXBuildFile; fileRef = 01462530256922630031E0B4 /* MoviesData */; };
 		01462535256927540031E0B4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01462534256927540031E0B4 /* Movie.swift */; };
 		0146253A25692BE70031E0B4 /* JSONMovieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146253925692BE70031E0B4 /* JSONMovieReader.swift */; };
-		01B8872C256AD4AB00C7645B /* AddMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8872B256AD4AB00C7645B /* AddMovieController.swift */; };
 		01B88730256ADFBD00C7645B /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8872F256ADFBD00C7645B /* AddMovieView.swift */; };
 		01C32DE3256ED6BF00439072 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C32DE2256ED6BF00439072 /* Toast.swift */; };
 		01CEBBFD2572AE7700E8ED85 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEBBFC2572AE7700E8ED85 /* MovieDetailsViewController.swift */; };
@@ -218,7 +217,6 @@
 				0C28912F25178C2C002B4028 /* AppDelegate.swift in Sources */,
 				01E9E36525702C1B00EE5B20 /* MovieDetails.swift in Sources */,
 				01462535256927540031E0B4 /* Movie.swift in Sources */,
-				01B8872C256AD4AB00C7645B /* AddMovieController.swift in Sources */,
 				0C28913125178C2C002B4028 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
