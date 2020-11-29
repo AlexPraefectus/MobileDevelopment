@@ -10,13 +10,22 @@ import UIKit
 class TableViewController: UITableViewController {
     var movies: [Movie] = [];
     let cellId = "cellId";
-
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredMovies: [Movie] = [];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.movies = self.loadData();
+        // table related stuff
         tableView.rowHeight = UITableView.automaticDimension;
         tableView.register(MovieCell.self, forCellReuseIdentifier: cellId);
         tableView.estimatedRowHeight = 250;
+        // search related stuff
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Movies"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,12 +33,15 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering {
+            return filteredMovies.count;
+        }
         return movies.count;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MovieCell;
-        cell.setMovie(movie: movies[indexPath.row])
+        cell.setMovie(movie: isFiltering ? filteredMovies[indexPath.row]: movies[indexPath.row])
         return cell
     }
     
@@ -37,10 +49,16 @@ class TableViewController: UITableViewController {
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            movies.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+            if isFiltering {
+                let id = filteredMovies[indexPath.row].uuid;
+                if let idx =  movies.firstIndex(where: {$0.uuid == id }) {
+                    movies.remove(at: idx);
+                }
+                filteredMovies.remove(at: indexPath.row);
+            } else {
+                movies.remove(at: indexPath.row);
+            }
+            tableView.reloadData();
         }
     }
     
@@ -61,7 +79,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMovie = movies[indexPath.row]
+        let selectedMovie = isFiltering ? filteredMovies[indexPath.row]: movies[indexPath.row]
         
         if (selectedMovie.details == nil) {
             let alert = UIAlertController(
@@ -86,6 +104,27 @@ class TableViewController: UITableViewController {
             vc.movieDetails = selectedMovie.details;
             self.present(vc, animated: true, completion: nil)
         }
-
     }
+    
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    var isFiltering: Bool {
+        return searchController.isActive && !isSearchBarEmpty
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredMovies = movies.filter { (movie: Movie) -> Bool in
+            return movie.title.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
+    }
+}
+
+extension TableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+  }
 }

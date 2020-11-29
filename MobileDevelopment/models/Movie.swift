@@ -14,6 +14,7 @@ class Movie {
     var type: String
     var poster: String
     var details: MovieDetails?;
+    var uuid: String;
     
     init(
         title: String,
@@ -29,5 +30,6 @@ class Movie {
         self.type = type;
         self.poster = poster;
         self.details = details;
+        self.uuid = UUID().uuidString;
     }
 }
