@@ -71,6 +71,37 @@
             </objects>
             <point key="canvasLocation" x="1789.8550724637682" y="130.58035714285714"/>
         </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="dFG-18-Fqb">
+            <objects>
+                <viewController storyboardIdentifier="movieDetailVC" id="H9X-am-5S3" customClass="MovieDetailsViewController" customModule="MobileDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f67-lh-GA2" customClass="MovieDetailsView" customModule="MobileDevelopment" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-qe-deH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Details" id="h88-hB-VrY">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Fen-a4-irl">
+                                            <connections>
+                                                <segue destination="2gc-hI-e15" kind="unwind" unwindAction="cancelWithSegue:" id="bKv-eU-tDO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gau-xJ-Omh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oym-gT-Zd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2gc-hI-e15" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2908" y="524"/>
+        </scene>
         <!--Movies-->
         <scene sceneID="zBJ-FS-feU">
             <objects>

@@ -94,7 +94,8 @@ class AddMovieView: UIView {
             year: yearInput.text ?? "",
             imdbId: "",
             type: typeInput.text ?? "",
-            poster: ""
+            poster: "",
+            details: nil
         )
     }
 }

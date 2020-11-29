@@ -59,6 +59,35 @@ class TableViewController: UITableViewController {
     @IBAction func cancel(segue:UIStoryboardSegue) {
         navigationController?.popViewController(animated: true);
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMovie = movies[indexPath.row]
+        
+        if (selectedMovie.details == nil) {
+            let alert = UIAlertController(
+                title: "Not found",
+                message: "No details available for the selected movie",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            tableView.deselectRow(at: indexPath, animated: true);
+        }
+        
+        if #available(iOS 13.0, *) {
+            if let vc = storyboard?.instantiateViewController(identifier: "movieDetailVC")
+                as? MovieDetailsViewController {
+                vc.movieDetails = selectedMovie.details;
+                self.present(vc, animated: true, completion: nil)
+            }
+        } else {
+            let vc = MovieDetailsViewController()
+            vc.movieDetails = selectedMovie.details;
+            self.present(vc, animated: true, completion: nil)
+        }
+
+    }
 }
 
 class CustomLabel: UILabel {
